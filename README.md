@@ -2,10 +2,8 @@
 The aim of this project is to make a research or learning tool for researchers who want to visualize **ensemble learning method- Adaboost (Adaptive Boosting)**. It will implement AdaBoost in  multidimensional dataset, showing instance weight changes. For ease of visualization, it will use a dimensionality reduction technique. It is important for users to view step by step weight change for the classifier and the dataset. This is what motivated me for taking the initiative to make a research tool.
 
 **Normal Requirements**
-Normal requirements consist of objectives and goals that are stated during the meeting with the clients. Normal requirements of the project are:
-
-*Working with user provided multidimensional datasets
-+Using one-hot encoding for categorical attributes
+* Working with user provided multidimensional datasets
++ Using one-hot encoding for categorical attributes
 -Using principal component analysis (PCA) in dimensionality reduction module
 -Visualizing instances/samples in two dimension graph with different colors for different classes
 -Performing Adaboost on the training data showing the user step by step weight changes of the dataset
