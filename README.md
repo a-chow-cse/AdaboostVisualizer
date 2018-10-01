@@ -3,6 +3,7 @@ The aim of this project is to make a research or learning tool for researchers w
 
 **Normal Requirements**
 Normal requirements consist of objectives and goals that are stated during the meeting with the clients. Normal requirements of the project are:
+
 -Working with user provided multidimensional datasets
 -Using one-hot encoding for categorical attributes
 -Using principal component analysis (PCA) in dimensionality reduction module
