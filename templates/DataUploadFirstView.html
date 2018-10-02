@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaboost Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/DataUploadFirstView') }}">
+
+    <script src="{{ url_for('static',filename='js/jquery-3.3.1.js' )}}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <head>
+        <meta charset="utf-8">
+        <style>
+            table {
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 12px sans-serif;
+            }
+
+            td {
+                border: 1px black solid;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <a href="#" class="w3-bar-item w3-right"><i class="fa fa-users fa-fw"></i>  About Us</a>
+        <a href="#" class="w3-bar-item w3-right"><i class="fa fa-eye fa-fw"></i>  User Guideline</a>
+    </div>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s8 w3-bar">
+      <span>File Type <strong>File Name</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Visualization Options</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Upload New File</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Preprocessing</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Dimension Reduction Module</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Adaboost Visualize</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Show Iteration Data</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Training Testing Module</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> Dataset Information</b></h5>
+  </header>
+
+  <div class="w3-container">
+    <h5>Countries</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+        <tr>
+            <th>Column Name</th>
+            <th>Column Name</th>
+        </tr>
+      <tr>
+        <td>A</td>
+        <td>65%</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>15.7%</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>5.6%</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>2.1%</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>1.9%</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>1.5%</td>
+      </tr>
+    </table><br>
+    <button class="w3-button w3-dark-grey">Show Dataset (Top 10)  <i class="fa fa-arrow-right"></i></button>
+  </div>
+
+    <header class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-dashboard"></i> Attribute Information</b></h5>
+    </header>
+
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <h5>Attribute Name</h5>
+        <img src="" style="width:100%" alt="Attribute Information Graph">
+      </div>
+      <div class="w3-twothird">
+        <h5>Feeds</h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+            <td>Attribute Type</td>
+            <td><i>Categorical</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+            <td>Maximum Value</td>
+            <td><i>15</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
+            <td>Minimum Value</td>
+            <td><i>10</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
+            <td>Distinct Value</td>
+            <td><i>2</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Unique Value</td>
+            <td><i>4</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
+            <td>NaN Value</td>
+            <td><i>35</i></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <hr>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

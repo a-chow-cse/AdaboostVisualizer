@@ -13,7 +13,12 @@ html, body {
 	align-items: center;
 	justify-content: center;
 }
-
+#errorShowing{
+    color : yellow;
+    border: 1px;
+    border-color: white;
+    padding: 2px;
+}
 .content {
 	margin: 1px;
 	width: 240px;
