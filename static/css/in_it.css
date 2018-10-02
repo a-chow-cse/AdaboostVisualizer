@@ -1,0 +1,83 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+    background-image: url("../img/Front-Background.png");
+}
+
+.wowpanel {
+	color: white;
+	font-family: sans-serif;
+	font-size: 1.8em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content {
+	margin: 1px;
+	width: 240px;
+	height: 240px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.w3-quarter{
+    margin: 5px;
+    padding-top: 50px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+.f-input{
+	height: 42px;
+	background-color: white;
+	border: 1px solid gray;
+	width: 100%;
+	max-width: 400px;
+	float: left;
+	padding: 0 14px;
+}
+
+
+#submit_button{
+    margin-top: 50px;
+    margin-left: 180px;
+    padding: 5px;
+}
+
+#submit_button {
+  color: #e50023;
+  background-color: #ffffff;
+  border-color: #000000;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+#submit_button:hover,
+#submit_button:active,
+#submit_button:focus,
+#submit_button.active {
+  background: #e50023;
+  color: #ffffff;
+  border-color: #000000;
+}
